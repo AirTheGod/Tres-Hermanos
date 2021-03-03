@@ -1,0 +1,27 @@
+classdef playingCards
+    properties
+        cardSuit = ['Heart', 'Diamond', 'Spades', 'Clubs']
+        cardValues = ['A', '1', '2', '3', '4', '5', '6', '7',   ...
+            '8', '9', '10', 'J', 'Q', 'K']  
+        cardImage
+        cardAssignment
+        Suit
+        Value
+        Score
+    end
+    
+    methods
+        function obj = assignedCards (individualCards)
+            if (nargin == 1) && (individualCards > 0) && (individualCards <= 52)
+                obj.cardAssignment = individualCards
+                obj.cardImage = sprintf('card%d.png' , individualCards)
+                
+                %This should assign 1 card with a specific value that
+                %remains the same. With this assignment it should look
+                %through my files for a matching description of the card
+                %and display the correct image
+                
+            end
+                
+            
+           
